@@ -1,5 +1,22 @@
+import { Routes, Route } from "react-router-dom";
+import PageLayout from "./layouts/PageLayout";
+import HomePage from "./pages/HomePage";
+import UserPage from "./pages/UserPage";
+import NotFound from "./pages/NotFound";
+
 function App() {
-  return <div>GitHub application</div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<PageLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="home" element={<HomePage />} />
+          <Route path="/user/:user" element={<UserPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </>
+  );
 }
 
 export default App;
