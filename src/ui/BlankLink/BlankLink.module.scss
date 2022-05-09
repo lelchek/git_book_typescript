@@ -1,0 +1,10 @@
+@import "../../styles/scss/base";
+
+.root {
+  color: $charleston_green;
+  text-decoration: underline;
+
+  &:hover {
+    color: $black;
+  }
+}

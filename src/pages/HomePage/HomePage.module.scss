@@ -1,0 +1,11 @@
+@import "../../styles/scss/base";
+
+.title {
+  margin-bottom: $main_offset;
+
+  @include text_large_regular;
+}
+
+.listItem {
+  margin-bottom: $secondary_offset;
+}

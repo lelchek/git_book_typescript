@@ -1,11 +1,9 @@
 @mixin font_size($pixels) {
   font-size: $pixels;
-  font-size: rem($pixels);
 }
 
 @mixin line_height($pixels) {
   line-height: $pixels;
-  line-height: rem($pixels);
 }
 
 @mixin text_base_regular {

@@ -1,5 +1,32 @@
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { userList, getUserList } from "../../app/userListSlice";
+import UserListItem from "../../components/UserListItem";
+
+import styles from "./HomePage.module.scss";
+
 const HomePage = () => {
-  return <div>Home Page</div>;
+  const dispatch = useAppDispatch();
+  const users = useAppSelector(userList);
+
+  useEffect(() => {
+    if (users.length === 0) {
+      dispatch(getUserList());
+    }
+  }, [dispatch, users]);
+
+  return (
+    <div>
+      <h1 className={styles.title}>User List</h1>
+      <ul>
+        {users.map((user) => (
+          <li key={user.id} className={styles.listItem}>
+            <UserListItem user={user} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default HomePage;
