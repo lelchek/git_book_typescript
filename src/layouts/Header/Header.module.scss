@@ -1,0 +1,27 @@
+@import "../../styles/scss/base";
+
+.root {
+  height: $mobile_header_height;
+  background: $main;
+  color: $white;
+  padding: 0 $main_offset;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: $breakpoint_desktop) {
+    height: $desktop_header_height;
+  }
+}
+
+.logo {
+  margin-right: $main_offset;
+}
+
+.logoImage {
+  width: 32px;
+  height: 32px;
+}
+
+.title {
+  @include text_large_medium;
+}

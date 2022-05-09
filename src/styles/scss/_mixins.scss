@@ -1,31 +1,31 @@
-@mixin font-size($pixels) {
+@mixin font_size($pixels) {
   font-size: $pixels;
   font-size: rem($pixels);
 }
 
-@mixin line-height($pixels) {
+@mixin line_height($pixels) {
   line-height: $pixels;
   line-height: rem($pixels);
 }
 
-@mixin text-base-regular {
-  @include font-size(16px);
-  @include line-height(20px);
+@mixin text_base_regular {
+  @include font_size(16px);
+  @include line_height(20px);
 }
 
-@mixin text-base-medium {
-  @include text-base-regular;
+@mixin text_base_medium {
+  @include text_base_regular;
 
   font-weight: 700;
 }
 
-@mixin text-large-regular {
-  @include font-size(20px);
-  @include line-height(24px);
+@mixin text_large_regular {
+  @include font_size(28px);
+  @include line_height(34px);
 }
 
-@mixin text-large-medium {
-  @include text-large-regular;
+@mixin text_large_medium {
+  @include text_large_regular;
 
   font-weight: 700;
 }
