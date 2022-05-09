@@ -1,0 +1,31 @@
+@mixin font-size($pixels) {
+  font-size: $pixels;
+  font-size: rem($pixels);
+}
+
+@mixin line-height($pixels) {
+  line-height: $pixels;
+  line-height: rem($pixels);
+}
+
+@mixin text-base-regular {
+  @include font-size(16px);
+  @include line-height(20px);
+}
+
+@mixin text-base-medium {
+  @include text-base-regular;
+
+  font-weight: 700;
+}
+
+@mixin text-large-regular {
+  @include font-size(20px);
+  @include line-height(24px);
+}
+
+@mixin text-large-medium {
+  @include text-large-regular;
+
+  font-weight: 700;
+}
