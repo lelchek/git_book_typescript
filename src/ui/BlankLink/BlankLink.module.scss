@@ -4,6 +4,8 @@
   color: $charleston_green;
   text-decoration: underline;
 
+  @include text_base_medium;
+
   &:hover {
     color: $black;
   }

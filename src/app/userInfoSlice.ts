@@ -45,5 +45,6 @@ export const userInfoSlice = createSlice({
 export const { clearData } = userInfoSlice.actions;
 
 export const userInfo = (state: RootState) => state.userInfo.data;
+export const fetchStatus = (state: RootState) => state.userInfo.status;
 
 export default userInfoSlice.reducer;

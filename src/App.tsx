@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<PageLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/:user" element={<UserPage />} />
+          <Route path="/:userLogin" element={<UserPage />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

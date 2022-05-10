@@ -29,10 +29,10 @@ header {
 }
 
 main {
-  min-height: calc(100% - #{$mobile_header_height + $mobile_footer_height});
+  min-height: calc(100vh - #{$mobile_header_height});
 
   @media screen and (min-width: $breakpoint_desktop) {
-    min-height: calc(100% - #{$desktop_header_height + $desktop_footer_height});
+    min-height: calc(100vh - #{$desktop_header_height});
   }
 }
 

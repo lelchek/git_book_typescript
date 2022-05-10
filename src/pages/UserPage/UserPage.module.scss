@@ -1,0 +1,26 @@
+@import "../../styles/scss/base";
+
+.title {
+  margin-bottom: $main_offset;
+
+  @include text_large_medium;
+}
+
+.wrapper {
+  @media screen and (min-width: $breakpoint_desktop) {
+    display: flex;
+  }
+}
+
+.image {
+  width: 296px;
+  height: 296px;
+  border-radius: 50%;
+  margin-bottom: $main_offset;
+
+  @media screen and (min-width: $breakpoint_desktop) {
+    margin-bottom: 0;
+    margin-right: $main_offset;
+    flex-shrink: 0;
+  }
+}
