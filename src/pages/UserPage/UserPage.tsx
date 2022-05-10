@@ -71,17 +71,18 @@ const UserPage = () => {
             title="Location"
             text={user.location}
           />
-          <p className={styles.paragraph}>
-            Blog:{" "}
-            <span>
-              <BlankLink
-                className={styles.link}
-                title={user.blog}
-                url={user.blog}
-              />
-            </span>
-          </p>
-
+          {user.blog && (
+            <p className={styles.paragraph}>
+              Blog:{" "}
+              <span>
+                <BlankLink
+                  className={styles.link}
+                  title={user.blog}
+                  url={user.blog}
+                />
+              </span>
+            </p>
+          )}
           <Paragraph className={styles.paragraph} title="Bio" text={user.bio} />
         </div>
       </div>
