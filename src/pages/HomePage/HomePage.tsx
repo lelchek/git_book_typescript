@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { userList, getUserList } from "../../app/userListSlice";
 import UserListItem from "../../components/UserListItem";
-
 import styles from "./HomePage.module.scss";
 
 const HomePage = () => {

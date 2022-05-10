@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { User } from "../../api/userListAPI";
 import BlankLink from "../../ui/BlankLink";
-
 import styles from "./UserListItem.module.scss";
 
 type UserListItemProps = {

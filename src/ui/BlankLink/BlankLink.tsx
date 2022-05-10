@@ -1,13 +1,20 @@
+import cn from "classnames";
 import styles from "./BlankLink.module.scss";
 
 type BlankLinkProps = {
   title: string;
   url: string;
+  className?: string;
 };
 
-const BlankLink = ({ title, url }: BlankLinkProps) => {
+const BlankLink = ({ title, url, className }: BlankLinkProps) => {
   return (
-    <a className={styles.root} target="_blank" rel="noreferrer" href={url}>
+    <a
+      className={cn(styles.root, className)}
+      target="_blank"
+      rel="noreferrer"
+      href={url}
+    >
       {title}
     </a>
   );

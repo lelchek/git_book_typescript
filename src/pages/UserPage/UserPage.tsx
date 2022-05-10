@@ -9,7 +9,6 @@ import {
 } from "../../app/userInfoSlice";
 import BlankLink from "../../ui/BlankLink";
 import Paragraph from "../../ui/Paragraph";
-
 import styles from "./UserPage.module.scss";
 
 const UserPage = () => {
@@ -17,8 +16,6 @@ const UserPage = () => {
   const dispatch = useAppDispatch();
   const user = useAppSelector(userInfo);
   const status = useAppSelector(fetchStatus);
-
-  console.log("status :>> ", status);
 
   useEffect(() => {
     if (userLogin) {
@@ -76,7 +73,11 @@ const UserPage = () => {
           <p className={styles.paragraph}>
             Blog:{" "}
             <span>
-              <BlankLink title={user.blog} url={user.blog} />
+              <BlankLink
+                className={styles.link}
+                title={user.blog}
+                url={user.blog}
+              />
             </span>
           </p>
 

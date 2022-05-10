@@ -25,6 +25,10 @@
   }
 }
 
+.link {
+  @include text_base_medium;
+}
+
 .paragraph:not(:last-child) {
   margin-bottom: $secondary_offset;
 }
