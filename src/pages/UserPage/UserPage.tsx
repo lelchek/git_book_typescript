@@ -43,12 +43,36 @@ const UserPage = () => {
       <div className={styles.wrapper}>
         <img className={styles.image} alt={user.login} src={user.avatar_url} />
         <div className={styles.contentWrapper}>
-          <Paragraph title="Followers" text={user.followers} />
-          <Paragraph title="Following" text={user.following} />
-          <Paragraph title="Created" text={user.created_at} />
-          <Paragraph title="Company" text={user.company} />
-          <Paragraph title="Email" text={user.email} />
-          <Paragraph title="Location" text={user.location} />
+          <Paragraph
+            className={styles.paragraph}
+            title="Followers"
+            text={user.followers}
+          />
+          <Paragraph
+            className={styles.paragraph}
+            title="Following"
+            text={user.following}
+          />
+          <Paragraph
+            className={styles.paragraph}
+            title="Created"
+            text={user.created_at}
+          />
+          <Paragraph
+            className={styles.paragraph}
+            title="Company"
+            text={user.company}
+          />
+          <Paragraph
+            className={styles.paragraph}
+            title="Email"
+            text={user.email}
+          />
+          <Paragraph
+            className={styles.paragraph}
+            title="Location"
+            text={user.location}
+          />
           <p className={styles.paragraph}>
             Blog:{" "}
             <span>
@@ -56,7 +80,7 @@ const UserPage = () => {
             </span>
           </p>
 
-          <Paragraph title="Bio" text={user.bio} />
+          <Paragraph className={styles.paragraph} title="Bio" text={user.bio} />
         </div>
       </div>
     </div>

@@ -24,3 +24,7 @@
     flex-shrink: 0;
   }
 }
+
+.paragraph:not(:last-child) {
+  margin-bottom: $secondary_offset;
+}
