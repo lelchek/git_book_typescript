@@ -1,4 +1,4 @@
-import { get } from "./config";
+import { get, baseUrl } from "./config";
 
 export const PAGE_LIMIT = 100;
 
@@ -10,7 +10,15 @@ export interface User {
 }
 
 export const fetchUserList = async (pageLimit = PAGE_LIMIT) => {
-  const { data, headers } = await get<User[]>(`users?per_page=${pageLimit}`);
+  const { data, headers } = await get<User[]>(
+    `${baseUrl}/users?per_page=${pageLimit}`
+  );
+
+  return { data, links: headers.link };
+};
+
+export const fetchMoreUserList = async (url: string) => {
+  const { data, headers } = await get<User[]>(url);
 
   return { data, links: headers.link };
 };

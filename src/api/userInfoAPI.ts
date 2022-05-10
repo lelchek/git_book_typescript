@@ -1,4 +1,4 @@
-import { get } from "./config";
+import { get, baseUrl } from "./config";
 
 export interface UserInfo {
   login: string;
@@ -16,7 +16,7 @@ export interface UserInfo {
 }
 
 export const fetchUserInfo = async (userName: string) => {
-  const { data } = await get<UserInfo>(`users/${userName}`);
+  const { data } = await get<UserInfo>(`${baseUrl}/users/${userName}`);
 
   return data;
 };

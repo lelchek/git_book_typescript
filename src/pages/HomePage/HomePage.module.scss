@@ -6,6 +6,10 @@
   @include text_large_regular;
 }
 
-.listItem {
+.list {
+  margin-bottom: $main_offset;
+}
+
+.listItem:not(:last-child) {
   margin-bottom: $secondary_offset;
 }

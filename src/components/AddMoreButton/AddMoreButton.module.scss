@@ -1,0 +1,15 @@
+@import "../../styles/scss/base";
+
+.root {
+  border: 1px solid $black;
+  border-radius: 4px;
+  background: $charleston_green;
+  color: $white;
+  padding: 8px $main_offset;
+
+  @include text_base_medium;
+
+  &:hover {
+    background: $black;
+  }
+}

@@ -8,7 +8,7 @@ const headers = {
 
 export const get = async <T>(url: string) => {
   return axios
-    .get<T>(`${baseUrl}/${url}`, { headers })
+    .get<T>(url, { headers })
     .then((response) => {
       return response;
     })

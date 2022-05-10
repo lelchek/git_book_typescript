@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { userList, getUserList } from "../../app/userListSlice";
 import UserListItem from "../../components/UserListItem";
+import AddMoreButton from "../../components/AddMoreButton";
 import styles from "./HomePage.module.scss";
 
 const HomePage = () => {
@@ -17,13 +18,14 @@ const HomePage = () => {
   return (
     <div>
       <h1 className={styles.title}>User List</h1>
-      <ul>
+      <ul className={styles.list}>
         {users.map((user) => (
           <li key={user.id} className={styles.listItem}>
             <UserListItem user={user} />
           </li>
         ))}
       </ul>
+      <AddMoreButton />
     </div>
   );
 };
