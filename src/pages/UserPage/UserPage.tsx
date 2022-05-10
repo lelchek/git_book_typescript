@@ -7,6 +7,7 @@ import {
   fetchStatus,
   clearData,
 } from "../../app/userInfoSlice";
+import { getFormatDate } from "../../helpers/formatDate";
 import BlankLink from "../../ui/BlankLink";
 import Paragraph from "../../ui/Paragraph";
 import styles from "./UserPage.module.scss";
@@ -53,7 +54,7 @@ const UserPage = () => {
           <Paragraph
             className={styles.paragraph}
             title="Created"
-            text={user.created_at}
+            text={getFormatDate(user.created_at)}
           />
           <Paragraph
             className={styles.paragraph}
